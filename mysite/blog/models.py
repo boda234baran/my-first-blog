@@ -10,7 +10,7 @@ class Post(models.Model): # наслідуючи від medels.Model django до
     created_date = models.DateTimeField(default=timezone.now) # дата і час
     published_date = models.DateTimeField(blank=True, null=True)
 
-    def publish(self): #(функція = мутод) метод публікації для записі
+    def publish(self): #(функція = метод) метод публікації для записі
         self.published_date = timezone.now()
         self.save()
 
